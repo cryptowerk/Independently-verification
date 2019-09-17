@@ -108,6 +108,7 @@ The flow of registering data works like this:
       "minSupportedAPIVersion": 1
     }
     ````
+    
     -----------
 8.  It tells you that Ethereum accepted your document. That's because Ethereum's heartbeat is about 15 seconds long. Bitcoin's heartbeat clocks at around 10 minutes.
     So, it shouldn't surprise that your document has arrived in Ethereum already but not yet in Bitcoin.
