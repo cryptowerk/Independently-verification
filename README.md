@@ -27,6 +27,7 @@ The flow of registering data works like this:
 5. Note that you didn't provide us with the actual document, just its hash. So, we don't know it. So, we can't leak it nor can it be stolen from us. It never leaves your computer. No trust into any security measures is required.
 6. The API responds:
     -----------
+   
    ````
    {
       "maxSupportedAPIVersion": 6,
@@ -44,7 +45,8 @@ The flow of registering data works like this:
      curl -sS --header "X-ApiKey: $apiKey $apiCred" --data "retrievalId=ri22218341d127a2e12eb4d6bcf17464cd1d8170516d15a1d225db62643f339bdeddd7c69" $server/API/v6/verify
      It responds with:
     -----------
-  ````
+    
+  ````  
   {
       "maxSupportedAPIVersion": 6,
       "documents": [
@@ -108,8 +110,7 @@ The flow of registering data works like this:
       "minSupportedAPIVersion": 1
     }
     ````
-    -----------
-    
+    ----------- 
 8.  It tells you that Ethereum accepted your document. That's because Ethereum's heartbeat is about 15 seconds long. Bitcoin's heartbeat clocks at around 10 minutes.
     So, it shouldn't surprise that your document has arrived in Ethereum already but not yet in Bitcoin.
     That's why the API says "hasBeenInsertedIntoAllRequestedBlockchains": false. More on that later.
@@ -139,8 +140,8 @@ The flow of registering data works like this:
 14. Now, after some minutes, we ask the API again and check whether it also arrived in Bitcoin, which has a 10 minute heartbeat:
     curl -sS --header "X-ApiKey: $apiKey $apiCred" --data "retrievalId=ri22218341d127a2e12eb4d6bcf17464cd1d8170516d15a1d225db62643f339bdeddd7c69" $server/API/v6/verify 
   -----
-  
-   ````
+   
+  ```` 
    {
       "maxSupportedAPIVersion": 6,
       "documents": [
