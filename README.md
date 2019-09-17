@@ -138,7 +138,7 @@ The flow of registering data works like this:
 14. Now, after some minutes, we ask the API again and check whether it also arrived in Bitcoin, which has a 10 minute heartbeat:
     curl -sS --header "X-ApiKey: $apiKey $apiCred" --data "retrievalId=ri22218341d127a2e12eb4d6bcf17464cd1d8170516d15a1d225db62643f339bdeddd7c69" $server/API/v6/verify 
   
-   ```
+   ````
    {
       "maxSupportedAPIVersion": 6,
       "documents": [
@@ -250,7 +250,7 @@ The flow of registering data works like this:
       ],
       "minSupportedAPIVersion": 1
     }
-    ```
+    ````
 
 15. And yes, it's now anchored in both Ethereum and Bitcoin. It also says "hasBeenInsertedIntoAllRequestedBlockchains": true.
 16. By the way, instead of asking the API you can tell the API at registration time that it should notify you through an http callback and tell you about any arrival in any blockchain(s). 
